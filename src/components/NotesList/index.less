@@ -1,0 +1,32 @@
+.noteslist {
+  .positionAbsolute(0, 0, 0, 0);
+
+  .list {
+    .positionAbsolute(0, 0, 0, 0);
+    .scrollable();
+
+    ul {
+      padding: 0;
+    }
+  }
+
+  .loading {
+    .positionAbsolute(0, 0, auto, 0);
+    transform: translate3d(0, -20px, 0);
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    background-color: @primaryColorLight;
+    font-size: 80%;
+    text-align: center;
+    line-height: 20px;
+    transition: transform 0.2s ease-out;
+    z-index: 1;
+  }
+
+  &.pending {
+    .loading {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

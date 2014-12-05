@@ -1,0 +1,11 @@
+platforms/*
+plugins/*
+node_modules
+www/js/ethernotes.js
+www/js/ethernotes.min.js
+www/css/index.css
+www/components/**/*
+components/**/*
+!www/components/.gitignore
+!components/.gitignore
+desktopbuilds/*

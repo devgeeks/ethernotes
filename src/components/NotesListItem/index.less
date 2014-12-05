@@ -1,0 +1,29 @@
+.noteslistitem {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+
+  &.animatedlistitem-enter {
+    transform: scale(0.01);
+    opacity: 0.01;
+    transition: transform .3s ease-in, opacity .3s linear;
+  }
+
+  &.animatedlistitem-enter.animatedlistitem-enter-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  &.animatedlistitem-leave {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .3s ease-in, opacity .3s linear;
+  }
+
+  &.animatedlistitem-leave.animatedlistitem-leave-active {
+    opacity: 0.01;
+    transform: scale(0.01);
+  }
+} 
+

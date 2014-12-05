@@ -1,0 +1,17 @@
+.login {
+  .positionAbsolute();
+  z-index: 100;
+  background-color: @primaryColorSuperDark;
+  transition: transform 0.2s ease-in-out;
+
+  &.dismissed {
+    transform: translate(0, 100%);
+  }
+
+  h2 {
+    color: @primaryColorLight;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 2px;
+  }
+}

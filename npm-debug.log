@@ -1,0 +1,63 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'tinyvents@0.3.0' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json Ethernotes@0.1.0 No repository field.
+5 warn package.json Ethernotes@0.1.0 scripts['tests'] should probably be scripts['test'].
+6 warn package.json Ethernotes@0.1.0 No README data
+7 warn package.json path@0.4.9 path is also the name of a node core module.
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'tinyvents@0.3.0', null ]
+10 verbose cache add name=undefined spec="tinyvents@0.3.0" args=["tinyvents@0.3.0",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'tinyvents@0.3.0',
+11 verbose parsed url   path: 'tinyvents@0.3.0',
+11 verbose parsed url   href: 'tinyvents@0.3.0' }
+12 verbose cache add name="tinyvents" spec="0.3.0" args=["tinyvents","0.3.0"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '0.3.0',
+13 verbose parsed url   path: '0.3.0',
+13 verbose parsed url   href: '0.3.0' }
+14 verbose addNamed [ 'tinyvents', '0.3.0' ]
+15 verbose addNamed [ '0.3.0', '0.3.0' ]
+16 silly lockFile 332722a4-tinyvents-0-3-0 tinyvents@0.3.0
+17 verbose lock tinyvents@0.3.0 /Users/tommy/.npm/332722a4-tinyvents-0-3-0.lock
+18 verbose registry.get https://registry.npmjs.org/tinyvents not expired, no request
+19 silly lockFile 332722a4-tinyvents-0-3-0 tinyvents@0.3.0
+20 silly lockFile 332722a4-tinyvents-0-3-0 tinyvents@0.3.0
+21 error Error: version not found: tinyvents@0.3.0
+21 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:125:12
+21 error     at RegClient.get_ (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:130:14)
+21 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:49:12)
+21 error     at evalmachine.<anonymous>:271:14
+21 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+21 error     at Object.oncomplete (evalmachine.<anonymous>:107:15)
+22 error If you need help, you may report this *entire* log,
+22 error including the npm and node versions, at:
+22 error     <http://github.com/npm/npm/issues>
+23 error System Darwin 14.0.0
+24 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "tinyvents@0.3.0"
+25 error cwd /Users/tommy/src/devgeeks/ethernotes
+26 error node -v v0.10.33
+27 error npm -v 1.4.28
+28 verbose exit [ 1, true ]
