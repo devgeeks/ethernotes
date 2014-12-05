@@ -1,0 +1,22 @@
+{
+  "name": "ethernotes",
+  "version": "0.1.0",
+  "homepage": "https://github.com/devgeeks/ethernotes",
+  "authors": [
+    "Tommy-Carlos Williams <tommy@devgeeks.org>"
+  ],
+  "description": "Ethernotes is a zero-knowledge cloud-based notes app powered by Crypton",
+  "main": "src/app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionicons": "~2.0.0"
+  }
+}

@@ -4,8 +4,8 @@ node_modules
 www/js/ethernotes.js
 www/js/ethernotes.min.js
 www/css/index.css
-www/components/**/*
-components/**/*
-!www/components/.gitignore
-!components/.gitignore
+www/bower_components/**/*
+bower_components/**/*
+!www/bower_components/.gitignore
+!bower_components/.gitignore
 desktopbuilds/*

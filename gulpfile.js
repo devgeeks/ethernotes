@@ -11,9 +11,19 @@ var lessFiles = [
   'src/components/**/*.less'
 ];
 
-var browsers = ['Chrome', 'Android', 'Blackberry', 'Firefox', 'iOS'];
+var filesToMove = [
+  './bower_components/ionicons/fonts/**',
+  './bower_components/ionicons/css/**'
+];
+gulp.task('move', function(){
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  gulp.src(filesToMove, { base: './' })
+  .pipe(gulp.dest('www'));
+});
 
-gulp.task('styles', function () {
+var browsers = ['Chrome', 'Android', 'Blackberry', 'Firefox', 'iOS'];
+gulp.task('styles', ['move'], function () {
   gulp.src(lessFiles)
     .pipe(concat('index.css'))
     .pipe(less({
@@ -27,7 +37,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('www/css'));
 });
 
-gulp.task('styles-dev', function () {
+gulp.task('styles-dev', ['move'],function () {
   gulp.src(lessFiles)
     .pipe(concat('index.css'))
     .pipe(less({
