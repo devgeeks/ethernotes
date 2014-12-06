@@ -63,14 +63,6 @@
         box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
       }
   
-      /*a {*/
-        /*color: inherit;*/
-        /*text-decoration: none;*/
-        /*display: block;*/
-        /*width: 100%;*/
-        /*height: 100%;*/
-      /*}*/
-
       &.disabled,
       &.disabled:active {
         color: @lightGray;
@@ -94,78 +86,6 @@
           color: @primaryColorLight;
         }
       }
-    }
-  }
-
-  .spinnercontainer {
-    opacity: 0;
-    width: 30px;
-    margin: 0 auto;
-    transition: opacity linear 0.3s;
-  }
-
-  &.pending {
-    .spinnercontainer {
-      opacity: 1;
-    }
-  }
-  
-  .spinner {
-    animation: rotator 1.4s linear infinite;
-  }
-
-  @keyframes rotator {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(210deg);
-    }
-  }
-
-  .path {
-    stroke-dasharray: 187;
-    stroke-dashoffset: 0;
-    transform-origin: center;
-    animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-  }
-
-  @keyframes colors {
-    0% {
-      stroke: @white;
-    }
-
-    25% {
-      stroke: @primaryColorLight;
-    }
-
-    50% {
-      stroke: @primaryColorMedium;
-    }
-
-    75% {
-      stroke: @primaryColorLight;
-    }
-
-    100% {
-      stroke: @white;
-    }
-  }
-
-  @keyframes dash {
-    0% {
-      stroke-dashoffset: 187;
-    }
-
-    50% {
-      stroke-dashoffset: 46.75;
-      transform: rotate(135deg);
-    }
-
-    100% {
-      stroke-dashoffset: 187;
-      transform: rotate(450deg);
     }
   }
 }

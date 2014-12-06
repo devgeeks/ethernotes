@@ -1,26 +1,23 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build-dev',
+1 verbose cli   './node_modules/.bin/cordova',
+1 verbose cli   'emulate',
+1 verbose cli   'ios' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart Ethernotes@0.1.0
-6 info start Ethernotes@0.1.0
-7 verbose unsafe-perm in lifecycle true
-8 info Ethernotes@0.1.0 Failed to exec start script
-9 error Ethernotes@0.1.0 start: `npm run build-dev && open www/index.html`
-9 error Exit status 1
-10 error Failed at the Ethernotes@0.1.0 start script.
-10 error This is most likely a problem with the Ethernotes package,
-10 error not with npm itself.
-10 error Tell the author that this fails on your system:
-10 error     npm run build-dev && open www/index.html
-10 error You can get their info via:
-10 error     npm owner ls Ethernotes
-10 error There is likely additional logging output above.
-11 error System Darwin 14.0.0
-12 error command "node" "/usr/local/bin/npm" "start"
-13 error cwd /Users/tommy/src/devgeeks/ethernotes
-14 error node -v v0.10.33
-15 error npm -v 1.4.28
-16 error code ELIFECYCLE
-17 verbose exit [ 1, true ]
+4 error Error: ENOENT, open '/Users/tommy/src/devgeeks/ethernotes/node_modules/build-dev/package.json'
+5 error If you need help, you may report this *entire* log,
+5 error including the npm and node versions, at:
+5 error     <http://github.com/npm/npm/issues>
+6 error System Darwin 14.0.0
+7 error command "node" "/usr/local/bin/npm" "run" "build-dev" "./node_modules/.bin/cordova" "emulate" "ios"
+8 error cwd /Users/tommy/src/devgeeks/ethernotes
+9 error node -v v0.10.33
+10 error npm -v 1.4.28
+11 error path /Users/tommy/src/devgeeks/ethernotes/node_modules/build-dev/package.json
+12 error code ENOENT
+13 error errno 34
+14 verbose exit [ 34, true ]

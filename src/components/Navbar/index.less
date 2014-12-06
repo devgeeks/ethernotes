@@ -7,6 +7,7 @@
 
   h1 {
     .positionAbsolute(0, 56px, 56px, 72px);
+    .ellipsis();
     color: @white;
     margin: 0;
     padding: 0;
@@ -14,9 +15,6 @@
     font-weight: 100;
     height: 56px;
     line-height: 56px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 
     i {
       font-size: 90%;
@@ -69,6 +67,7 @@
     &:active,
     .active {
       background-color: @primaryColorSuperDark;
+      color: @primaryColorLight;
       box-shadow: none;
     }
   }

@@ -6,8 +6,11 @@
  "use strict";
 
 var React = require('react');
+var React = require('react/addons');
+var PureRenderMixin = React.PureRenderMixin;
 
 var NotesListItem = React.createClass({
+  mixins: [PureRenderMixin],
 
   render: function() {
     return (

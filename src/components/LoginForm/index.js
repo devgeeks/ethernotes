@@ -6,6 +6,7 @@
  "use strict";
 
 var React = require('react');
+var Spinner = require('../Spinner');
 var __ = require('../../constants/NoteConstants.js');
 
 var LoginForm = React.createClass({
@@ -19,13 +20,7 @@ var LoginForm = React.createClass({
 
     return (
       <div className={classes}>
-        <div className='spinnercontainer'>
-          <svg className='spinner' width='30px' height='30px' 
-              viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg'>
-            <circle className='path' fill='none' strokeWidth='6' 
-              strokeLinecap='round' cx='33' cy='33' r='30'></circle>
-          </svg>
-        </div>
+        <Spinner width='30px' height='30px' pending={this.props.pending} />
         <form autoComplete='off' onSubmit={this.props.loginHandler}>
           <input id='username' type='text' name='username' autoCorrect='off' 
             autoCapitalize='off' placeholder='Username' tabIndex='1' />
