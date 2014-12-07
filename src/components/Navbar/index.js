@@ -17,7 +17,7 @@ var Navbar = React.createClass({
         </div>
         <h1><a href='#' className='type-dropdown'>Notes
           <i className='mdi mdi-menu-down'></i>
-          </a> <small>Ethernotes</small>
+          </a> <small>{this.props.title}</small>
         </h1>
       </div>
     );

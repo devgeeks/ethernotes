@@ -12,7 +12,7 @@ var React = require('react');
 var Navbar = require('../Navbar');
 var Main = require('../Main');
 var Login = require('../Login');
-var AppActions = require('../../actions/NoteActionCreators.js');
+var AppActions = require('../../actions/NoteActionCreators');
 var NoteStore = require('../../stores/NoteStore.js');
 var SessionStore = require('../../stores/SessionStore.js');
 
@@ -45,7 +45,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div className='app'>
-        <Navbar />
+        <Navbar title='Ethernotes' />
         <Main state={this.state.notesState} />
         <Login state={this.state.sessionState} />
       </div>
