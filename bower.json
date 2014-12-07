@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "ionicons": "~2.0.0"
+    "mdi": "~0.5.19-alpha"
   }
 }

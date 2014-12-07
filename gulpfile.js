@@ -12,8 +12,8 @@ var lessFiles = [
 ];
 
 var filesToMove = [
-  './bower_components/ionicons/fonts/**',
-  './bower_components/ionicons/css/**'
+  './bower_components/mdi/fonts/**',
+  './bower_components/mdi/*.css'
 ];
 gulp.task('move', function(){
   // the base option sets the relative root for the set of files,
