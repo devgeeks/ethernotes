@@ -47,17 +47,16 @@ SessionStore.dispatchToken = NoteAppDispatcher.register(function(payload) {
     case __.LOGIN:
       break;
 
-    case __.LOGGED_IN:
+    case __.LOGOUT:
+      break;
+
+    case __.SESSION_RESPONSE:
       console.log(payload);
       _state.session = action.response.session;
       _state.pending = false;
       _state.error = action.response.error || '';
-      break;
-
-    case __.LOGOUT:
-      break;
-
-    case __.LOGGED_IN:
+      // @TODO remove this once the app responds to errors
+      console.log(_state.error || 'success');
       break;
 
     default:

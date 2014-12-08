@@ -16,8 +16,10 @@ var Login = React.createClass({
     event.preventDefault();
     console.log('LOGIN');
     var loginForm = this.refs.loginForm;
+    // Trim usernames
     var username = loginForm.refs.username.getDOMNode().value.trim();
-    var passphrase = loginForm.refs.passphrase.getDOMNode().value.trim();
+    // Spaces are valid in passphrases... don't trim
+    var passphrase = loginForm.refs.passphrase.getDOMNode().value;
     if (!username || !passphrase) {
       return;
     }

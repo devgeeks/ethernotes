@@ -20,7 +20,7 @@ var CryptonAPI = {
     dispatch(__.PENDING_SESSION, null, null);
     // authorize() with the Crypton server, then dispatch an LOGIN action type
     crypton.authorize(username, passphrase, function(err, session) {
-      dispatch(__.LOGGED_IN, {
+      dispatch(__.SESSION_RESPONSE, {
         session: session,
         error: err || ''
       }, null);

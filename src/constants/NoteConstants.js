@@ -16,6 +16,5 @@ module.exports = keyMirror({
   RECEIVE_NOTE: null,     // Receive a single note from the server
   LOGIN: null,            // Log in using crypton.authorize()
   LOGOUT: null,           // Log out from crypton session
-  LOGGED_IN: null,        // Logged in, session available
-  LOGGED_OUT: null        // Logged out, session destroyed
+  SESSION_RESPONSE: null  // Logged in or out, session or error returned
 });
