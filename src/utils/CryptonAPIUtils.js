@@ -1,3 +1,4 @@
+/* global crypton */
 /* jshint node: true */
 "use strict";
 
@@ -16,12 +17,18 @@ function dispatch(type, response, params) {
 var CryptonAPI = {
   login: function(username, passphrase) {
     // dispatch a PENDING action type
-    dispatch(__.PENDING_REQUEST, null, null);
+    dispatch(__.PENDING_SESSION, null, null);
     // authorize() with the Crypton server, then dispatch an LOGIN action type
+    crypton.authorize(username, passphrase, function(err, session) {
+      dispatch(__.LOGGED_IN, {
+        session: session,
+        error: err || ''
+      }, null);
+    });
   },
   logout: function(user) {
     // dispatch a PENDING action type
-    dispatch(__.PENDING_REQUEST, null, null);
+    dispatch(__.PENDING_SESSION, null, null);
     // logout of the crypton server, then dispatch a LOGOUT action type
   },
   getNotes: function(params) {
@@ -30,11 +37,13 @@ var CryptonAPI = {
     // fetch the note, then dispatch a RECEIVE_NOTES action type
     setTimeout(function() {
       // send back some fake data for now...
-      dispatch(__.RECEIVE_NOTES,
-        [
+      dispatch(__.RECEIVE_NOTES, {
+        notes: [
           {id: 'adc113d3a14de', text: 'lorem ipsum blah blah'},
           {id: 'aec32f12a234d', text: 'boopity bop bop, wah wah wah'}
-        ], null);
+        ],
+        error: undefined
+      }, null);
     }, 1000);
   },
   getNote: function(id) {

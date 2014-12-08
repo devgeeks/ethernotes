@@ -50,16 +50,16 @@ NoteStore.dispatchToken = NoteAppDispatcher.register(function(payload) {
 
     case __.RECEIVE_NOTES:
       console.log(payload);
-      _state.notes = action.response;
+      _state.notes = action.response.notes;
       _state.pending = false;
-      _state.error = '';
+      _state.error = action.response.error || '';
       break;
 
     case __.RECEIVE_NOTE:
       console.log(payload);
-      _state.note = action.response;
+      _state.note = action.response.note;
       _state.pending = false;
-      _state.error = '';
+      _state.error = action.response.error || '';
       break;
 
     case __.CREATE_NOTE:

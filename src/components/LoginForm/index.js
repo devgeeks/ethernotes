@@ -23,9 +23,11 @@ var LoginForm = React.createClass({
         <Spinner width='30px' height='30px' pending={this.props.pending} />
         <form autoComplete='off' onSubmit={this.props.loginHandler}>
           <input id='username' type='text' name='username' autoCorrect='off' 
-            autoCapitalize='off' placeholder='Username' tabIndex='1' />
+            autoCapitalize='off' placeholder='Username' tabIndex='1'
+            ref='username' />
           <input id='passphrase' type='password' name='passphrase' 
-            placeholder='Passphrase' tabIndex='2' />
+            placeholder='Passphrase' tabIndex='2'
+            ref='passphrase' />
 
           <div className='buttons'>
             <a className='button submit' tabIndex='3' 
