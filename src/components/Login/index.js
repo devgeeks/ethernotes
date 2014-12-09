@@ -41,7 +41,7 @@ var Login = React.createClass({
     // @TODO: Needs an error handling component of some kind
     return (
       <div className={classes}>
-        <h2>ethernotes</h2>
+        <h2>Ethernotes</h2>
         <LoginForm
           ref='loginForm'
           pending={this.props.state.pending}

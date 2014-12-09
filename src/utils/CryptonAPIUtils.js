@@ -18,7 +18,8 @@ var CryptonAPI = {
   login: function(username, passphrase) {
     // dispatch a PENDING action type
     dispatch(__.PENDING_SESSION, null, null);
-    // authorize() with the Crypton server, then dispatch an LOGIN action type
+    // authorize() with the Crypton server, then dispatch a SESSION_RESPONSE
+    //   action type
     crypton.authorize(username, passphrase, function(err, session) {
       dispatch(__.SESSION_RESPONSE, {
         session: session,
@@ -29,14 +30,15 @@ var CryptonAPI = {
   logout: function(user) {
     // dispatch a PENDING action type
     dispatch(__.PENDING_SESSION, null, null);
-    // logout of the crypton server, then dispatch a LOGOUT action type
+    // logout of the Crypton server, then dispatch a SESSION_RESPONSE action
+    //   type
   },
   getNotes: function(params) {
     // dispatch a PENDING action type
     dispatch(__.PENDING_REQUEST, null, null);
     // fetch the note, then dispatch a RECEIVE_NOTES action type
     setTimeout(function() {
-      // send back some fake data for now...
+      // @FIXME: Send back some fake data for now...
       dispatch(__.RECEIVE_NOTES, {
         notes: [
           {id: 'adc113d3a14de', text: 'lorem ipsum blah blah'},
