@@ -2,13 +2,13 @@
   .positionAbsolute(0, 0, auto, 0);
   .BoxShadowHelper(1);
   height: 56px;
-  background-color: @primaryColorDark;
+  background-color: @primaryColor;
   z-index: 10;
 
   h1 {
     .positionAbsolute(0, 56px, 56px, 72px);
     .ellipsis();
-    color: @white;
+    color: @textPrimaryColor;
     margin: 0;
     padding: 0;
     font-size: 130%;
@@ -27,7 +27,7 @@
 
       &:active,
       .active {
-        color: @primaryColorLight;
+        color: @lightPrimaryColor;
         transition: all 0s;
       }
     }
@@ -42,7 +42,7 @@
     width: 40px;
     height: 40px;
     line-height: 40px;
-    color: @white;
+    color: @textPrimaryColor;
     border-radius: 40px;
     text-align: center;
     margin: 8px;
@@ -66,8 +66,8 @@
 
     &:active,
     .active {
-      background-color: @primaryColorSuperDark;
-      color: @primaryColorLight;
+      background-color: @darkPrimaryColor;
+      color: @lightPrimaryColor;
       transition: background 0s;
     }
   }
