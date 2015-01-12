@@ -16,7 +16,7 @@ var _state = {
 
 //var NoteStore = assign({}, EventEmitter.prototype, {
 var NoteStore = {
-  
+
   getState: function() {
     return _state;
   },
