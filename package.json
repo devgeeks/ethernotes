@@ -12,7 +12,7 @@
     "build-dev": "npm run build-scripts-dev && npm run build-styles-dev",
     "build-scripts-dev": "./node_modules/.bin/browserify src/app.js -o www/js/ethernotes.js",
     "build-styles-dev": "gulp styles-dev",
-    "start": "npm run build-dev && open www/index.html",
+    "start": "npm run build-dev && ./node_modules/.bin/cordova run browser",
     "android": "./node_modules/.bin/cordova run android",
     "ios": "./node_modules/.bin/cordova run ios",
     "watch": "./node_modules/.bin/gulp watch",

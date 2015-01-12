@@ -31,7 +31,8 @@ var NotesList = React.createClass({
       <div className={classes}>
         <div className='loading'>
           <Spinner inline='true' dark='true' width='10px' height='10px'
-            pending={this.props.state.pending} /> Loading...
+            pending={this.props.state.pending} />
+          &nbsp; <span data-html10n-id='Loading…'>Loading…</span>
         </div>
         <div className='list'>
           <ul>

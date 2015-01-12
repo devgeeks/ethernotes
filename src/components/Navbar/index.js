@@ -15,9 +15,10 @@ var Navbar = React.createClass({
         <div className='button left menu'>
           <a href='#'><i className='mdi mdi-menu'></i></a>
         </div>
-        <h1><a href='#' className='type-dropdown'>Notes
+        <h1><a href='#' className='type-dropdown'>
+          <span data-l10n-id='Notes'>Notes</span>
           <i className='mdi mdi-menu-down'></i>
-          </a> <small>{this.props.title}</small>
+          </a> <small data-l10n-id={this.props.title}>{this.props.title}</small>
         </h1>
       </div>
     );

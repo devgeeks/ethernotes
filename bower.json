@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "mdi": "~0.5.19-alpha"
+    "mdi": "~0.5.19-alpha",
+    "html10n": "https://github.com/SpiderOak/html10n.js.git#fix-for-cordova-locale-imports"
   }
 }
